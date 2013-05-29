@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title — приложение ASP.NET MVC</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+       
+         @Scripts.Render("~/bundles/modernizr")
+         @Styles.Render("~/Content/bootstrap")
+        <style>
+            body {
+                padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="#">@Html.ActionLink("Ваша эмблема здесь", "Index", "Home")</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
+                            <li>@Html.ActionLink("О программе", "About", "Home")</li>
+                            <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            @if (IsSectionDefined("featured"))
+            {
+                <div class="hero-unit">
+                    @RenderSection("featured", required: false)
+                </div>
+            }
+
+            @RenderBody()
+        </div><!-- /container -->
+
+        <div id="footer">
+            <div class="container">
+                <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+            </div>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/Script/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

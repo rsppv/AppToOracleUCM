@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DomainModel.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DomainModel_DocInfoRef_DocInfo" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ucm.main.tpu.ru/idc/idcplg</Value>
+    </Setting>
+    <Setting Name="DomainModel_GetFileRef_GetFile" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ucm.main.tpu.ru/idc/idcplg</Value>
+    </Setting>
+    <Setting Name="DomainModel_MetaDataRef_MetaData" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ucm.main.tpu.ru/idc/idcplg</Value>
+    </Setting>
+    <Setting Name="DomainModel_SearchRef_Search" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ucm.main.tpu.ru/idc/idcplg</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
