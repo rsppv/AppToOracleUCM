@@ -32,5 +32,13 @@ namespace WebUI.Controllers
             return View(downloadedFile.DownloadedFileInfo);
         }
 
+        public ActionResult AdvancedSearch()
+        {
+            DocSearch docSearch = new DocSearch();
+            docSearch.StartSearch("test", "dDocName", "DESC", 20);
+            
+            return View(docSearch.Results.ToList());
+        }
+
     }
 }

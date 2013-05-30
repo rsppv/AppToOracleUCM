@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DomainModel.GetFileRef;
+using DomainModel.SearchRef;
 
 namespace DomainModel.Entity
 {
@@ -45,6 +46,19 @@ namespace DomainModel.Entity
             this.FileSize = fileInfo.dFileSize;
             this.Extension = fileInfo.dExtension;
             this.Format = fileInfo.dFormat;
+        }
+
+        public Document(SearchResults searchResults)
+        {
+            this.ID = searchResults.dID;
+            this.Name = searchResults.dDocName;
+            this.Title = searchResults.dDocTitle;
+            this.Type = searchResults.dDocType;
+            this.Author = searchResults.dDocAuthor;
+            this.CreateDate = searchResults.dInDate;
+            this.FileSize = searchResults.alternateFileSize;
+            this.Extension = searchResults.dExtension;
+            this.Format = searchResults.dFormat;
         }
 
     }

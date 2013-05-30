@@ -40,10 +40,13 @@ namespace DomainModel.Entity
             System.IO.FileStream fstream = null;
             try
             {
-                fstream = new System.IO.FileStream(filePath, System.IO.FileMode.Create);
-                fstream.Write(fileContent, 0, fileContent.Length);
+                using (fstream = new System.IO.FileStream(filePath, System.IO.FileMode.Create))
+                    fstream.Write(fileContent, 0, fileContent.Length);
             }
-            finally
+            catch 
+            {
+                
+            }finally
             {
                 if (fstream != null)
                 {
