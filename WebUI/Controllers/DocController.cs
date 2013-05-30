@@ -25,17 +25,19 @@ namespace WebUI.Controllers
             return View(document);
         }
 
-        public ActionResult DownloadFile(int id, String savePath)
+        public ActionResult DownloadFile(int id, String savePath = "")
         {
             DownloadedFile downloadedFile = new DownloadedFile();
-            downloadedFile.Download(id, savePath); 
+            if (savePath.Equals("")) downloadedFile.Download(id);
+            else downloadedFile.Download(id, savePath);
+            
             return View(downloadedFile.DownloadedFileInfo);
         }
 
         public ActionResult AdvancedSearch()
         {
             DocSearch docSearch = new DocSearch();
-            docSearch.StartSearch("test", "dDocName", "DESC", 20);
+            docSearch.StartSearch("dDocTitle <substring> `test`", "dDocName", "DESC", 20);
             
             return View(docSearch.Results.ToList());
         }

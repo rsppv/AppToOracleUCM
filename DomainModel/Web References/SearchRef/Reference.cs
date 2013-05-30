@@ -39,7 +39,7 @@ namespace DomainModel.SearchRef {
         
         /// <remarks/>
         public Search() {
-            this.Url = global::DomainModel.Properties.Settings.Default.DomainModel_DocInfoRef_DocInfo;
+            this.Url = global::DomainModel.Properties.Settings.Default.DomainModel_SearchRef_Search;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;

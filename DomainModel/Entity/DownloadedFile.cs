@@ -13,7 +13,7 @@ namespace DomainModel.Entity
     {
         private GetFile getfile = new GetFile();
         private IdcProperty[] extraProps;
-
+        
         public Document DownloadedFileInfo { get; set; }
 
         /*Конструктор устанавливает настройки
@@ -25,7 +25,7 @@ namespace DomainModel.Entity
             getfile.Credentials = new NetworkCredential(Constants.Login, Constants.Password);
         }
 
-        public void Download(int id, String savePath)
+        public void Download(int id, String savePath = Constants.DefaultPath)
         {
             GetFileByIDResult getFileResult = getfile.GetFileByID(id, true, "web", extraProps);
             IdcFile idcFile = getFileResult.downloadFile;

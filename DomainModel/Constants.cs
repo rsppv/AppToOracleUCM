@@ -11,5 +11,6 @@ namespace DomainModel
         public const String UrlToUCMServices = "http://ucm.vt.tpu.ru/idc/idcplg";
         public const String Login = "rsppv";
         public const String Password = "ucm";
+        public const String DefaultPath = @"C:\temp";
     }
 }
