@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using DomainModel.Entity;
 using DomainModel;
+using System.Web.Http;
+using System.Net;
+using System.Net.Http;
 
 namespace WebUI.Controllers
 {
@@ -34,12 +37,25 @@ namespace WebUI.Controllers
             return View(downloadedFile.DownloadedFileInfo);
         }
 
-        public ActionResult AdvancedSearch()
+        public ActionResult AdvancedSearch(String query)
         {
+            query = "doc";
+            query += "`";
             DocSearch docSearch = new DocSearch();
-            docSearch.StartSearch("dDocTitle <substring> `test`", "dDocName", "DESC", 20);
-            
+            if (query == null) 
+            {
+                throw new HttpException(404, "Results not found");
+            }
+            try
+            {
+                docSearch.StartSearch("dExtension <substring> `" + query, "dDocName", "DESC", 20);
+               
+            }
+            catch (Exception ex) { Console.Out.Write(ex.StackTrace); }
             return View(docSearch.Results.ToList());
+            
+          
+            
         }
 
     }
