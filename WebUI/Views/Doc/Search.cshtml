@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Поиск";
+}
+
+<h2>Поиск</h2>
+
+<div class="row-fluid">
+    <div class="span5 offset3">
+        <form method="post" action="/Doc/FormSearch">
+            <div class="input-append span12">
+                <input type="text" class="input-block-level" name="q">
+                <button type="submit" class="btn">Найти</button>
+            </div>
+        </form>
+    </div>
+</div>

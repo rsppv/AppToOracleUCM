@@ -273,7 +273,9 @@
     <Content Include="Scripts\jquery-2.0.1.min.map" />
     <Content Include="Views\Doc\About.cshtml" />
     <Content Include="Views\Doc\DownloadFile.cshtml" />
-    <Content Include="Views\Doc\AdvancedSearch.cshtml" />
+    <Content Include="Views\Doc\LetterSearch.cshtml" />
+    <Content Include="Views\Shared\DisplayError.cshtml" />
+    <Content Include="Views\Doc\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

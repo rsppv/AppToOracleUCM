@@ -1,0 +1,63 @@
+﻿@model IEnumerable<DomainModel.Entity.Document>
+
+@{
+    ViewBag.Title = "AdvancedSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-center">Форма для поиска</h3>
+<div class="row-fluid">
+    <div class="span5 offset3">
+        
+        <form method="post" action="/Doc/FormSearch">
+            <div class="input-append span12">
+                <input type="text" class="input-block-level" id="focusedInput" name="q" placeholder=@ViewBag.q>
+                <button type="submit" class="btn">Найти</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<h3 class="text-center">Результаты поиска</h3>
+
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Extension)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th>Action</th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Extension)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Скачать", "DownloadFile", "Doc", new { id = item.ID }, null) <br /> 
+                    @Html.ActionLink("Подробнее", "About", "Doc", new { id = item.ID }, null)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

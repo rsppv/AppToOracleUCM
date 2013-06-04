@@ -34,28 +34,55 @@ namespace WebUI.Controllers
             if (savePath.Equals("")) downloadedFile.Download(id);
             else downloadedFile.Download(id, savePath);
             
-            return View(downloadedFile.DownloadedFileInfo);
+            return View("About",downloadedFile.DownloadedFileInfo);
         }
 
-        public ActionResult AdvancedSearch(String query)
+        [System.Web.Mvc.HttpGet]
+        public ActionResult LetterSearch(String q)
         {
-            query = "doc";
-            query += "`";
+            //query = "T";
             DocSearch docSearch = new DocSearch();
-            if (query == null) 
+            if (q == null)
             {
                 throw new HttpException(404, "Results not found");
             }
             try
             {
-                docSearch.StartSearch("dExtension <substring> `" + query, "dDocName", "DESC", 20);
-               
+                docSearch.StartSearch("dDocTitle <starts> `" + q.ToUpper() + 
+                    "` <OR> dDocTitle <starts> `" + q.ToLower() + "`", "dCreateDate", "DESC");
+                return View(docSearch.Results.ToList());
             }
-            catch (Exception ex) { Console.Out.Write(ex.StackTrace); }
-            return View(docSearch.Results.ToList());
-            
-          
-            
+            catch (Exception ex)
+            {
+                return View("DisplayError", ex);
+            }
+
+        }
+
+        public ActionResult Search()
+        {
+            return View();
+        }
+        
+        public ActionResult FormSearch(String q)
+        {
+            DocSearch docSearch = new DocSearch();
+            if (q == null)
+            {
+                throw new HttpException(404, "Results not found");
+            }
+            try
+            {
+                ViewBag.q = q;
+                docSearch.StartSearch("dDocTitle <substring> `" + q.ToLower() +
+                    "` <OR> dDocTitle <substring> `" + q[0].ToString().ToUpper() + q.Substring(1).ToLower() + "`"
+                    , "dCreateDate", "DESC");
+                return View("LetterSearch", docSearch.Results.ToList());
+            }
+            catch (Exception ex)
+            {
+                return View("DisplayError", ex);
+            }
         }
 
     }

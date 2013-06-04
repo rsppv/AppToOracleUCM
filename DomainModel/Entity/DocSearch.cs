@@ -30,7 +30,7 @@ namespace DomainModel
         }
        
         /* return type IList<Document> */
-        public void StartSearch(String request, String sortValue, String sortOreder, int countRec = 10)
+        public void StartSearch(String request, String sortValue, String sortOreder, int countRec = 50)
         {
             AdvancedSearchResult searchResults = new AdvancedSearchResult();
             if (countRec < 1 || countRec > 50) countRec = 50;

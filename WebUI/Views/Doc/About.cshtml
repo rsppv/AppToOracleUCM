@@ -42,10 +42,10 @@
         <dt>@Html.DisplayNameFor(model => model.Format)</dt>
         <dd>@Html.DisplayFor(model => model.Format)</dd>
 
-
+        <dd>
+            @Html.ActionLink("Скачать", "DownloadFile", "Doc", new { id = Model.ID }, 
+                new { @class="pull-right btn btn-primary" })
+        </dd>
     </dl>
 </fieldset>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
