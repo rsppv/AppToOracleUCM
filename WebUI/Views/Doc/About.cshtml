@@ -1,45 +1,47 @@
 ﻿@model DomainModel.Entity.Document
 
 @{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Информация о документе";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>About</h2>
+<h2>Дополнительная информация о документе</h2>
 
 <fieldset>
-    <legend>Document</legend>
+    <legend>
+        @Model.Title
+    </legend>
 
     <dl class="dl-horizontal">
-        <dt>@Html.DisplayNameFor(model => model.Name)</dt>
+        <dt>Идентификатор</dt>
         <dd>@Html.DisplayFor(model => model.Name)</dd>
            
 
-        <dt>@Html.DisplayNameFor(model => model.Title)</dt>
+        <dt>Заголовок</dt>
         <dd>@Html.DisplayFor(model => model.Title)</dd>
 
 
-        <dt> @Html.DisplayNameFor(model => model.Type)</dt>
+        <dt>Тип</dt>
         <dd> @Html.DisplayFor(model => model.Type)</dd>
 
 
-        <dt>@Html.DisplayNameFor(model => model.Author)</dt>
+        <dt>Автор</dt>
         <dd>@Html.DisplayFor(model => model.Author)</dd>
 
 
-        <dt> @Html.DisplayNameFor(model => model.CreateDate)</dt>
+        <dt>Дата создания</dt>
         <dd>@Html.DisplayFor(model => model.CreateDate)</dd>
 
 
-        <dt>@Html.DisplayNameFor(model => model.FileSize)</dt>
+        <dt>Размер файла</dt>
         <dd>@Html.DisplayFor(model => model.FileSize)</dd>
 
 
-        <dt>@Html.DisplayNameFor(model => model.Extension)</dt>
+        <dt>Расширение</dt>
         <dd>@Html.DisplayFor(model => model.Extension)</dd>
 
 
-        <dt>@Html.DisplayNameFor(model => model.Format)</dt>
+        <dt>Формат дакумента</dt>
         <dd>@Html.DisplayFor(model => model.Format)</dd>
 
         <dd>

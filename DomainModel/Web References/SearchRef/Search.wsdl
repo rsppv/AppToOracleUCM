@@ -90,7 +90,6 @@
           <s:element minOccurs="0" maxOccurs="1" name="dDocAuthor" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="dSecurityGroup" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="dDocAccount" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="xLichnost_ID" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="dExtension" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="dWebExtension" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="dRevLabel" type="s:string" />
@@ -213,7 +212,7 @@
   </binding>
   <service name="Search">
     <port name="SearchSoap" binding="s0:SearchSoap">
-      <soap:address location="http://ucm.main.tpu.ru/idc/idcplg" />
+      <soap:address location="http://ucm4.main.tpu.ru/idc/idcplg" />
     </port>
   </service>
 </definitions>

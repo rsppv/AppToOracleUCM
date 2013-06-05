@@ -37,7 +37,7 @@ namespace DomainModel.MetaDataRef {
         
         /// <remarks/>
         public MetaData() {
-            this.Url = global::DomainModel.Properties.Settings.Default.DomainModel_MetaDataRef_MetaData;
+            this.Url = global::DomainModel.Properties.Settings.Default.DomainModel_DocInfoRef_DocInfo;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;

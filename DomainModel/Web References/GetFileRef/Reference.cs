@@ -265,10 +265,6 @@ namespace DomainModel.GetFileRef {
         
         private string dDocAccountField;
         
-        private int xLichnost_IDField;
-        
-        private bool xLichnost_IDFieldSpecified;
-        
         private int dIDField;
         
         private bool dIDFieldSpecified;
@@ -402,27 +398,6 @@ namespace DomainModel.GetFileRef {
             }
             set {
                 this.dDocAccountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int xLichnost_ID {
-            get {
-                return this.xLichnost_IDField;
-            }
-            set {
-                this.xLichnost_IDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool xLichnost_IDSpecified {
-            get {
-                return this.xLichnost_IDFieldSpecified;
-            }
-            set {
-                this.xLichnost_IDFieldSpecified = value;
             }
         }
         

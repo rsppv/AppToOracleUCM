@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<DomainModel.Entity.Document>
 
 @{
-    ViewBag.Title = "AdvancedSearch";
+    ViewBag.Title = "Результаты поиска";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -24,18 +24,18 @@
 <table class="table table-bordered table-hover">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            Заголовок
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Author)
+            Автор
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Extension)
+            Разрешение
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CreateDate)
+            Дата создания
         </th>
-        <th>Action</th>
+        <th>Действия</th>
     </tr>
     <tbody>
         @foreach (var item in Model)

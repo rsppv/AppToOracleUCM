@@ -60,6 +60,5 @@ namespace DomainModel.Entity
             this.Extension = searchResults.dExtension;
             this.Format = searchResults.dFormat;
         }
-
     }
 }

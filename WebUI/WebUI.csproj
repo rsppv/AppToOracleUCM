@@ -276,6 +276,7 @@
     <Content Include="Views\Doc\LetterSearch.cshtml" />
     <Content Include="Views\Shared\DisplayError.cshtml" />
     <Content Include="Views\Doc\Search.cshtml" />
+    <Content Include="Views\Doc\ViewMeta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

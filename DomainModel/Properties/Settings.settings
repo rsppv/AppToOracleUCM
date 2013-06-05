@@ -3,16 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="DomainModel_DocInfoRef_DocInfo" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://ucm.main.tpu.ru/idc/idcplg</Value>
+      <Value Profile="(Default)">http://ucm4.main.tpu.ru/idc/idcplg</Value>
     </Setting>
     <Setting Name="DomainModel_GetFileRef_GetFile" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://ucm.main.tpu.ru/idc/idcplg</Value>
+      <Value Profile="(Default)">http://ucm4.main.tpu.ru/idc/idcplg</Value>
     </Setting>
     <Setting Name="DomainModel_SearchRef_Search" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://ucm.main.tpu.ru/idc/idcplg</Value>
+      <Value Profile="(Default)">http://ucm4.main.tpu.ru/idc/idcplg</Value>
     </Setting>
     <Setting Name="DomainModel_MetaDataRef_MetaData" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://ucm.main.tpu.ru/idc/idcplg</Value>
+      <Value Profile="(Default)">http://ucm4.main.tpu.ru/idc/idcplg</Value>
     </Setting>
   </Settings>
 </SettingsFile>

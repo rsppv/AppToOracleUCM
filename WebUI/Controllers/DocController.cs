@@ -21,9 +21,16 @@ namespace WebUI.Controllers
             return View();
         }
 
+        public ActionResult ViewMeta()
+        {
+            dMetaData metadata = new dMetaData();
+            return View(metadata.Types);
+        }
+
         public ActionResult About(int id)
         {
             DocInformation dInfo = new DocInformation();
+            dMetaData metadata = new dMetaData();
             Document document = dInfo.GetDocInfo(id);
             return View(document);
         }

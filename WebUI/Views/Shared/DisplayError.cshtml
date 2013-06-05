@@ -1,7 +1,7 @@
 ﻿@model System.Exception
 
 @{
-    ViewBag.Title = "DisplayError";
+    ViewBag.Title = "Ошибка";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -9,24 +9,24 @@
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
+                <h1>Произошла ошибка</h1>
             </hgroup>
         </div>
     </section>
 }
 
 <fieldset>
-    <legend>Error</legend>
+    <legend>Извините, произошла ошибка</legend>
 
     <dl class="dl-horizontal">
-        <dt>@Html.DisplayNameFor(model => model.Message)</dt>
+        <dt>Сообщение</dt>
         <dd>@Html.DisplayFor(model => model.Message)</dd>
 
 
-        <dt>@Html.DisplayNameFor(model => model.Source)</dt>
+        <dt>Источник</dt>
         <dd>@Html.DisplayFor(model => model.Source)</dd>
 
-        <dt>@Html.DisplayNameFor(model => model.StackTrace)</dt>
+        <dt>Список ошибок</dt>
         <dd>@Html.DisplayFor(model => model.StackTrace)</dd>
     </dl>
 </fieldset>

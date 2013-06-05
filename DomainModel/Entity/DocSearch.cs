@@ -41,13 +41,13 @@ namespace DomainModel
             }
             catch (Exception e)
             {
-                throw new Exception("Проблемы с соединением. Попробуйте позже.");
+                throw new Exception("Проблемы с соединением. Попробуйте позже");
             }
-            
-            if (searchResults == null) throw new Exception("The request could not be processed");
+
+            if (searchResults == null) throw new Exception("Ваш запрос не был обработан сервером. Попробуйте позже");
             if (searchResults.StatusInfo.statusCode < 0) throw new Exception(searchResults.StatusInfo.statusMessage);
             if (searchResults.SearchInfo.totalRows.Equals(0) || (searchResults.SearchResults.Count() == 0))
-                throw new Exception("Search results are not found");
+                throw new Exception("Запрашиваемая информация отсутсвует");
 
 
             CountResults = searchResults.SearchResults.Count();

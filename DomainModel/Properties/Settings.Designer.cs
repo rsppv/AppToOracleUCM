@@ -26,7 +26,7 @@ namespace DomainModel.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://ucm.main.tpu.ru/idc/idcplg")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://ucm4.main.tpu.ru/idc/idcplg")]
         public string DomainModel_DocInfoRef_DocInfo {
             get {
                 return ((string)(this["DomainModel_DocInfoRef_DocInfo"]));
@@ -36,7 +36,7 @@ namespace DomainModel.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://ucm.main.tpu.ru/idc/idcplg")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://ucm4.main.tpu.ru/idc/idcplg")]
         public string DomainModel_GetFileRef_GetFile {
             get {
                 return ((string)(this["DomainModel_GetFileRef_GetFile"]));
@@ -46,7 +46,7 @@ namespace DomainModel.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://ucm.main.tpu.ru/idc/idcplg")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://ucm4.main.tpu.ru/idc/idcplg")]
         public string DomainModel_SearchRef_Search {
             get {
                 return ((string)(this["DomainModel_SearchRef_Search"]));
@@ -56,7 +56,7 @@ namespace DomainModel.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://ucm.main.tpu.ru/idc/idcplg")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://ucm4.main.tpu.ru/idc/idcplg")]
         public string DomainModel_MetaDataRef_MetaData {
             get {
                 return ((string)(this["DomainModel_MetaDataRef_MetaData"]));

@@ -56,7 +56,6 @@
           <s:element minOccurs="0" maxOccurs="1" name="dDocAuthor" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="dSecurityGroup" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="dDocAccount" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="xLichnost_ID" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="dID" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="dRevClassID" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="dRevisionID" type="s:int" />
@@ -185,7 +184,7 @@
   </binding>
   <service name="DocInfo">
     <port name="DocInfoSoap" binding="s0:DocInfoSoap">
-      <soap:address location="http://ucm.main.tpu.ru/idc/idcplg" />
+      <soap:address location="http://ucm4.main.tpu.ru/idc/idcplg" />
     </port>
   </service>
 </definitions>

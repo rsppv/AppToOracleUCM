@@ -1,0 +1,36 @@
+﻿@model DomainModel.MetaDataRef.DocTypes
+
+@{
+    ViewBag.Title = "ViewMeta";
+}
+
+<h2>ViewMeta</h2>
+
+<fieldset>
+    <legend>DocTypes</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dDocType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dDocType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dDescription)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dGif)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dGif)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
