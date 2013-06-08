@@ -273,10 +273,12 @@
     <Content Include="Scripts\jquery-2.0.1.min.map" />
     <Content Include="Views\Doc\About.cshtml" />
     <Content Include="Views\Doc\DownloadFile.cshtml" />
-    <Content Include="Views\Doc\LetterSearch.cshtml" />
+    <Content Include="Views\Doc\SearchResult.cshtml" />
     <Content Include="Views\Shared\DisplayError.cshtml" />
     <Content Include="Views\Doc\Search.cshtml" />
     <Content Include="Views\Doc\ViewMeta.cshtml" />
+    <Content Include="Views\Doc\Author.cshtml" />
+    <Content Include="Views\Doc\Title.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -308,7 +310,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>50424</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:1997/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Алфавит";
+
+    String strEn = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    String strRus = "АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЭЮЯ";        
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">A-Z</a></li>
+    <li><a href="#tab2" data-toggle="tab">А-Я</a></li>
+  </ul>
+  <div class="tab-content">
+      <div class="tab-pane active" id="tab1">
+
+          <div class="btn-group">
+              @for (int i = 0; i < strEn.Length; i++)
+              {
+              
+                  @Html.ActionLink(strEn[i].ToString(), "TitleSearch", "Doc",
+                                                new { q = strEn[i].ToString(), inTitle = true },
+                                                new { @class = "btn" })
+                 if (i == strEn.Length / 2)
+                 {<br />}
+             }
+          </div>
+
+      </div>
+    <div class="tab-pane" id="tab2">
+      <div class="btn-group">
+              @for (int i = 0; i < strRus.Length; i++)
+              {
+              
+                  @Html.ActionLink(strRus[i].ToString(), "TitleSearch", "Doc",
+                                                new { q = strRus[i].ToString(), inTitle = true }, 
+                                                new { @class = "btn" })
+                 if (i == strRus.Length / 2)
+                 {<br />}
+             }
+          </div>
+    </div>
+  </div>
+</div>

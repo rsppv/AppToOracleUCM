@@ -48,6 +48,7 @@ namespace DomainModel
         {
             DocInfoByIDResult docInfoByIDResult = docinfo.DocInfoByID(id, true, extraProps);
             
+            
             if (docInfoByIDResult == null)
             {
                 throw new Exception("Ваш запрос не был обработан сервером. Попробуйте позже");

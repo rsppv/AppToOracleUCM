@@ -41,8 +41,19 @@
         <dd>@Html.DisplayFor(model => model.Extension)</dd>
 
 
-        <dt>Формат дакумента</dt>
+        <dt>Формат документа</dt>
         <dd>@Html.DisplayFor(model => model.Format)</dd>
+
+        <dt>Полный заголовок</dt>
+        <dd>@Html.DisplayFor(model => model.FullTitle)</dd>
+
+        <dt>Дата выпуска</dt>
+        <dd>@Html.DisplayFor(model => model.InDate)</dd>
+       
+         <!-- Правка названий -->
+
+        <dt>короткое название</dt>
+        <dd>@Html.DisplayFor(model => model.ShortTitle)</dd>
 
         <dd>
             @Html.ActionLink("Скачать", "DownloadFile", "Doc", new { id = Model.ID }, 

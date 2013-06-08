@@ -20,7 +20,12 @@ namespace DomainModel.Entity
         public int FileSize { get; set; }
         public string Extension { get; set; }
         public string Format { get; set; }
-        
+        public string ShortTitle { get; set; }
+        public string InDate { get; set; }
+        public string FullTitle { get; set; }
+
+
+
         
         public Document(ContentInfo contentInfo)
         {
@@ -33,6 +38,13 @@ namespace DomainModel.Entity
             this.FileSize = contentInfo.dFileSize;
             this.Extension = contentInfo.dExtension;
             this.Format = contentInfo.dFormat;
+            this.ShortTitle = (contentInfo.dOriginalName != null && contentInfo.dOriginalName.Length > 25) 
+                ? contentInfo.dOriginalName.Remove(24) 
+                + "..." : contentInfo.dOriginalName;
+            this.FullTitle = contentInfo.dOriginalName;
+            this.InDate = contentInfo.dInDate;
+
+
         }
 
         public Document(FileInfo fileInfo)
@@ -46,6 +58,13 @@ namespace DomainModel.Entity
             this.FileSize = fileInfo.dFileSize;
             this.Extension = fileInfo.dExtension;
             this.Format = fileInfo.dFormat;
+            this.ShortTitle = (fileInfo.dOriginalName != null && fileInfo.dOriginalName.Length > 25)
+                ? fileInfo.dOriginalName.Remove(24)
+                + "..." : fileInfo.dOriginalName;
+            this.FullTitle = fileInfo.dOriginalName;
+            this.InDate = fileInfo.dInDate;
+  
+
         }
 
         public Document(SearchResults searchResults)
@@ -59,6 +78,12 @@ namespace DomainModel.Entity
             this.FileSize = searchResults.alternateFileSize;
             this.Extension = searchResults.dExtension;
             this.Format = searchResults.dFormat;
+            this.ShortTitle = (searchResults.dOriginalName != null && searchResults.dOriginalName.Length > 25)
+                ? searchResults.dOriginalName.Remove(24)
+                + "..." : searchResults.dOriginalName;
+            this.FullTitle = searchResults.dOriginalName;
+            this.InDate = searchResults.dInDate;
+
         }
     }
 }
