@@ -40,7 +40,7 @@ namespace DomainModel
             if (searchResults == null) throw new Exception("Ваш запрос не был обработан сервером. Попробуйте позже");
             if (searchResults.StatusInfo.statusCode < 0) throw new Exception(searchResults.StatusInfo.statusMessage);
             if (searchResults.SearchInfo.totalRows.Equals(0) || (searchResults.SearchResults.Count() == 0))
-                throw new Exception("Запрашиваемая информация отсутсвует");
+                throw new Exception("По запросу ничего не найдено. Попробуйте использовать другие ключевые слова.");
 
 
             CountResults = searchResults.SearchResults.Count();

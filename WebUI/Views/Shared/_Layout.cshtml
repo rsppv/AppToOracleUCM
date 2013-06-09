@@ -4,8 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
         <title>@ViewBag.Title</title>
+        <meta name="description" content="Научные документы ТПУ. Труды сотрудников ТПУ." />
+        @if (IsSectionDefined("Keywords"))
+        { 
+            @RenderSection("Keywords")
+        }
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
+
 
         @Scripts.Render("~/bundles/modernizr")
         @Styles.Render("~/Content/bootstrap")
@@ -108,7 +114,7 @@
 
             <div id="footer">
                 <div class="container">
-                    <p class="muted credit">Разработано для <a href="http://tpu.ru">ТПУ</a> Распоповым Александром.</p>
+                    <p class="muted credit">Copyright © 2013 Разработано для <a href="http://tpu.ru">ТПУ</a> Распоповым Александром.</p>
                 </div>
             </div>
 

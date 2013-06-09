@@ -10,21 +10,21 @@ namespace WebUI.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Здравствуйте";
+            ViewBag.Message = "Добро пожаловать";
 
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Страница описания приложения";
+            ViewBag.Message = "Каталог документов";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Страница контактов";
+            ViewBag.Message = "Контактная информация";
 
             return View();
         }

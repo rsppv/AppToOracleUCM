@@ -92,7 +92,9 @@ namespace WebUI.Controllers
                     sortField = "xDocAuthorsTPU_FIO";
                 }
                 docSearch.StartSearch(query, sortField, "ASC");
+
                 return View("SearchResult", docSearch.Results.ToList());
+
             }
             catch (Exception ex)
             {
@@ -109,12 +111,13 @@ namespace WebUI.Controllers
         {
             ViewBag.inTitle = true;
             DocSearch docSearch = new DocSearch();
-            if (q == null)
-            {
-                throw new HttpException(404, "Незаполненное поле поиска. \nРекомендации:/n Попробуйте ввести ключевые слова для поиска");
-            }
+
             try
             {
+                if (q == null)
+                {
+                    throw new HttpException(404, "Незаполненное поле поиска. \nРекомендации:/n Попробуйте ввести ключевые слова для поиска");
+                }
                 ViewBag.q = q;
                 docSearch.StartSearch(
                     "xDocAnnotation <substring> `" + q.ToLower() +
