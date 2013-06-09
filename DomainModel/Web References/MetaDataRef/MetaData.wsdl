@@ -69,6 +69,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="dOrder" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="dOptionListType" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="dOptionListValues" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="xDocCaption" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="UserMetaFields">

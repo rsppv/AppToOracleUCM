@@ -481,6 +481,8 @@ namespace DomainModel.MetaDataRef {
         
         private string dOptionListValuesField;
         
+        private string xDocCaptionField;
+        
         /// <remarks/>
         public string dName {
             get {
@@ -653,6 +655,16 @@ namespace DomainModel.MetaDataRef {
             }
             set {
                 this.dOptionListValuesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string xDocCaption {
+            get {
+                return this.xDocCaptionField;
+            }
+            set {
+                this.xDocCaptionField = value;
             }
         }
     }

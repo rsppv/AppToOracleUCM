@@ -13,9 +13,9 @@ namespace DomainModel.Entity
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Title { get; set; }
         public string Type { get; set; }
-        public string Author { get; set; }
+        public string Author { get ; set; }
+        public string CoAuthor { get; set; }
         public string CreateDate { get; set; }
         public int FileSize { get; set; }
         public string Extension { get; set; }
@@ -23,7 +23,9 @@ namespace DomainModel.Entity
         public string ShortTitle { get; set; }
         public string InDate { get; set; }
         public string FullTitle { get; set; }
-
+        public string Keywords { get; set; }
+        public string Annotation { get; set; }
+        public string Title { get; set; }
 
 
         
@@ -31,19 +33,29 @@ namespace DomainModel.Entity
         {
             this.ID = contentInfo.dID;
             this.Name = contentInfo.dDocName;
-            this.Title = contentInfo.dDocTitle;
             this.Type = contentInfo.dDocType;
-            this.Author = contentInfo.dDocAuthor;
+            this.Author = (contentInfo.xDocAuthorsTPU_FIO != "") 
+                ? contentInfo.xDocAuthorsTPU_FIO.TrimEnd(',')
+                : "Отсутствует";
             this.CreateDate = contentInfo.dCreateDate;
             this.FileSize = contentInfo.dFileSize;
             this.Extension = contentInfo.dExtension;
             this.Format = contentInfo.dFormat;
-            this.ShortTitle = (contentInfo.dOriginalName != null && contentInfo.dOriginalName.Length > 25) 
-                ? contentInfo.dOriginalName.Remove(24) 
-                + "..." : contentInfo.dOriginalName;
-            this.FullTitle = contentInfo.dOriginalName;
+            this.ShortTitle = (contentInfo.xDocCaption != null && contentInfo.xDocCaption.Length > 100) 
+                ? contentInfo.xDocCaption.Remove(99) 
+                + "..." : contentInfo.xDocCaption;
+            this.FullTitle = contentInfo.xDocCaption;
             this.InDate = contentInfo.dInDate;
-
+            this.CoAuthor = (contentInfo.xDocCoAuthors != "")
+                ? contentInfo.xDocCoAuthors.TrimEnd(',')
+                : "Отсутствует";
+            this.Keywords = (contentInfo.xDocKeyWords != "")
+                ? contentInfo.xDocKeyWords.TrimEnd(',')
+                : "Отсутствует";
+            this.Annotation = (contentInfo.xDocAnnotation != "")
+                ? contentInfo.xDocAnnotation.TrimEnd(',')
+                : "Отсутствует";
+            this.Title = contentInfo.dDocTitle;
 
         }
 
@@ -51,39 +63,44 @@ namespace DomainModel.Entity
         {
             this.ID = fileInfo.dID;
             this.Name = fileInfo.dDocName;
-            this.Title = fileInfo.dDocTitle;
             this.Type = fileInfo.dDocType;
-            this.Author = fileInfo.dDocAuthor;
+            this.Author = fileInfo.xDocAuthorsTPU_FIO.TrimEnd(',');
             this.CreateDate = fileInfo.dCreateDate;
             this.FileSize = fileInfo.dFileSize;
             this.Extension = fileInfo.dExtension;
             this.Format = fileInfo.dFormat;
-            this.ShortTitle = (fileInfo.dOriginalName != null && fileInfo.dOriginalName.Length > 25)
-                ? fileInfo.dOriginalName.Remove(24)
-                + "..." : fileInfo.dOriginalName;
-            this.FullTitle = fileInfo.dOriginalName;
+            this.ShortTitle = (fileInfo.xDocCaption != null && fileInfo.xDocCaption.Length > 100)
+                ? fileInfo.xDocCaption.Remove(99)
+                + "..." : fileInfo.xDocCaption;
+            this.FullTitle = fileInfo.xDocCaption;
             this.InDate = fileInfo.dInDate;
-  
-
+            this.CoAuthor = fileInfo.xDocCoAuthors;
+            this.Keywords = fileInfo.xDocKeyWords.TrimEnd(',');
+            this.Annotation = fileInfo.xDocAnnotation;
+            this.Title = fileInfo.dDocTitle;
         }
 
         public Document(SearchResults searchResults)
         {
             this.ID = searchResults.dID;
             this.Name = searchResults.dDocName;
-            this.Title = searchResults.dDocTitle;
             this.Type = searchResults.dDocType;
-            this.Author = searchResults.dDocAuthor;
+            this.Author = (searchResults.xDocAuthorsTPU_FIO != "")
+                ? searchResults.xDocAuthorsTPU_FIO.TrimEnd(',')
+                : "Отсутствует";
             this.CreateDate = searchResults.dInDate;
             this.FileSize = searchResults.alternateFileSize;
             this.Extension = searchResults.dExtension;
             this.Format = searchResults.dFormat;
-            this.ShortTitle = (searchResults.dOriginalName != null && searchResults.dOriginalName.Length > 25)
-                ? searchResults.dOriginalName.Remove(24)
-                + "..." : searchResults.dOriginalName;
-            this.FullTitle = searchResults.dOriginalName;
+            this.ShortTitle = (searchResults.xDocCaption != null && searchResults.xDocCaption.Length > 100)
+                ? searchResults.xDocCaption.Remove(99)
+                + "..." : searchResults.xDocCaption;
+            this.FullTitle = searchResults.xDocCaption;
             this.InDate = searchResults.dInDate;
-
+            this.CoAuthor = searchResults.xDocCoAuthors;
+            this.Keywords = searchResults.xDocKeyWords.TrimEnd(',');
+            this.Annotation = searchResults.xDocAnnotation;
+            this.Title = searchResults.dDocTitle;
         }
     }
 }

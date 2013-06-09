@@ -9,7 +9,7 @@
 
 <fieldset>
     <legend>
-        @Model.Title
+        @Model.FullTitle
     </legend>
 
     <dl class="dl-horizontal">
@@ -17,15 +17,15 @@
         <dd>@Html.DisplayFor(model => model.Name)</dd>
            
 
-        <dt>Заголовок</dt>
-        <dd>@Html.DisplayFor(model => model.Title)</dd>
+        <dt>Полное название</dt>
+        <dd>@Html.DisplayFor(model => model.FullTitle)</dd>
 
 
         <dt>Тип</dt>
         <dd> @Html.DisplayFor(model => model.Type)</dd>
 
 
-        <dt>Автор</dt>
+        <dt>Авторы</dt>
         <dd>@Html.DisplayFor(model => model.Author)</dd>
 
 
@@ -40,20 +40,23 @@
         <dt>Расширение</dt>
         <dd>@Html.DisplayFor(model => model.Extension)</dd>
 
-
+        
         <dt>Формат документа</dt>
         <dd>@Html.DisplayFor(model => model.Format)</dd>
 
-        <dt>Полный заголовок</dt>
-        <dd>@Html.DisplayFor(model => model.FullTitle)</dd>
+        <dt>Аннотация</dt>
+        <dd>@Html.DisplayFor(model => model.Annotation)</dd>
 
-        <dt>Дата выпуска</dt>
-        <dd>@Html.DisplayFor(model => model.InDate)</dd>
+
        
          <!-- Правка названий -->
 
-        <dt>короткое название</dt>
-        <dd>@Html.DisplayFor(model => model.ShortTitle)</dd>
+        <dt>Ключевые слова</dt>
+        <dd>@Html.DisplayFor(model => model.Keywords)</dd>
+
+
+        <dt>Соавторы</dt>
+        <dd>@Html.DisplayFor(model => model.CoAuthor)</dd>
 
         <dd>
             @Html.ActionLink("Скачать", "DownloadFile", "Doc", new { id = Model.ID }, 

@@ -35,15 +35,8 @@ namespace DomainModel
             AdvancedSearchResult searchResults = new AdvancedSearchResult();
             if (countRec < 1 || countRec > 50) countRec = 50;
             
-            try
-            {
-                searchResults = searchService.AdvancedSearch(request, sortValue, sortOreder, countRec, true, extraProps);
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Проблемы с соединением. Попробуйте позже");
-            }
-
+            searchResults = searchService.AdvancedSearch(request, sortValue, sortOreder, countRec, true, extraProps);
+ 
             if (searchResults == null) throw new Exception("Ваш запрос не был обработан сервером. Попробуйте позже");
             if (searchResults.StatusInfo.statusCode < 0) throw new Exception(searchResults.StatusInfo.statusMessage);
             if (searchResults.SearchInfo.totalRows.Equals(0) || (searchResults.SearchResults.Count() == 0))

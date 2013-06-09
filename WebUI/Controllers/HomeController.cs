@@ -10,7 +10,7 @@ namespace WebUI.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Общая информация о ресурсе";
+            ViewBag.Message = "Здравствуйте";
 
             return View();
         }

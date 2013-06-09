@@ -90,6 +90,11 @@
           <s:element minOccurs="0" maxOccurs="1" name="dDocAuthor" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="dSecurityGroup" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="dDocAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="xDocCaption" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="xDocKeyWords" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="xDocAuthorsTPU_FIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="xDocCoAuthors" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="xDocAnnotation" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="dExtension" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="dWebExtension" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="dRevLabel" type="s:string" />

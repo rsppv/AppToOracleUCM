@@ -15,6 +15,9 @@ namespace DomainModel.Entity
         private IdcProperty[] extraProps;
         
         public Document DownloadedFileInfo { get; set; }
+        public byte[] FileContent { get; set; }
+        public String FileName { get; set; }
+        public String FileType { get; set; }
 
         /*Конструктор устанавливает настройки
          * сертификата доступа к серверу UCM*/
@@ -25,35 +28,15 @@ namespace DomainModel.Entity
             getfile.Credentials = new NetworkCredential(Constants.Login, Constants.Password);
         }
 
-        public void Download(int id, String savePath = Constants.DefaultPath)
+        public void Download(int id)
         {
-            GetFileByIDResult getFileResult = getfile.GetFileByID(id, true, "web", extraProps);
-            IdcFile idcFile = getFileResult.downloadFile;
-            DownloadedFileInfo = new Document(getFileResult.FileInfo[0]);
+            GetFileByIDResult Result = getfile.GetFileByID(id, true, "web", extraProps);
+            DownloadedFileInfo = new Document(Result.FileInfo[0]);
 
-            String fileName;
-            fileName = ( idcFile.fileName.Equals("") ) ? "temp" : fileName = idcFile.fileName;
-
-            String filePath = savePath + @"\" + fileName;
-            byte[] fileContent = idcFile.fileContent;
-            
-            System.IO.FileStream fstream = null;
-            try
-            {
-                using (fstream = new System.IO.FileStream(filePath, System.IO.FileMode.Create))
-                    fstream.Write(fileContent, 0, fileContent.Length);
-            }
-            catch 
-            {
-                
-            }finally
-            {
-                if (fstream != null)
-                {
-                    fstream.Close();
-                }
-            }
-
+            FileContent = Result.downloadFile.fileContent;
+            FileName = (DownloadedFileInfo.Title.Equals("")) ? "temp" : FileName = DownloadedFileInfo.Title;
+            FileName += "." + DownloadedFileInfo.Extension;
+            FileType = DownloadedFileInfo.Format;
         }
 
     }

@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+﻿    <!DOCTYPE html>
 <html lang="ru">
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title — приложение ASP.NET MVC</title>
+        <title>@ViewBag.Title</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
 
@@ -27,19 +27,19 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="/Home/Index">Лого</a>
+                    <a class="brand" href="/Home/Index">Каталог</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
                             <li>@Html.ActionLink("О ресурсе", "About", "Home")</li>
                             <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Поиск <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Каталог <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li>@Html.ActionLink("По автору", "Author", "Doc")</li>
                                     <li>@Html.ActionLink("По названию", "Title", "Doc")</li>
                                     <li class="divider"></li>
-                                    <li><a href="#">Быстрый поиск</a></li>
+                                    <li>@Html.ActionLink("Быстрый поиск", "Search", "Doc")</li>
                                 </ul>
                             </li>
                         </ul>

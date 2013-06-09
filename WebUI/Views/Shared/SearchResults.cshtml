@@ -1,0 +1,44 @@
+﻿@model IEnumerable<DomainModel.Entity.Document>
+
+<h2 class="text-left">Результаты поиска</h2>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            Название
+        </th>
+        <th>
+            Авторы
+        </th>
+        <th>
+            Расширение
+        </th>
+        <th>
+            Дата создания
+        </th>
+        <th>Действия</th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShortTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Extension)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Скачать", "DownloadFile", "Doc", new { id = item.ID }, null) <br /> 
+                    @Html.ActionLink("Подробнее", "About", "Doc", new { id = item.ID }, null)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -342,6 +342,16 @@ namespace DomainModel.SearchRef {
         
         private string dDocAccountField;
         
+        private string xDocCaptionField;
+        
+        private string xDocKeyWordsField;
+        
+        private string xDocAuthorsTPU_FIOField;
+        
+        private string xDocCoAuthorsField;
+        
+        private string xDocAnnotationField;
+        
         private string dExtensionField;
         
         private string dWebExtensionField;
@@ -483,6 +493,56 @@ namespace DomainModel.SearchRef {
             }
             set {
                 this.dDocAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string xDocCaption {
+            get {
+                return this.xDocCaptionField;
+            }
+            set {
+                this.xDocCaptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string xDocKeyWords {
+            get {
+                return this.xDocKeyWordsField;
+            }
+            set {
+                this.xDocKeyWordsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string xDocAuthorsTPU_FIO {
+            get {
+                return this.xDocAuthorsTPU_FIOField;
+            }
+            set {
+                this.xDocAuthorsTPU_FIOField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string xDocCoAuthors {
+            get {
+                return this.xDocCoAuthorsField;
+            }
+            set {
+                this.xDocCoAuthorsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string xDocAnnotation {
+            get {
+                return this.xDocAnnotationField;
+            }
+            set {
+                this.xDocAnnotationField = value;
             }
         }
         

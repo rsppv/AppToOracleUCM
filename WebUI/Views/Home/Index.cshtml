@@ -9,33 +9,41 @@
                 <h2>@ViewBag.Message</h2>
             </hgroup>
             <p>
-                Информация информация информация информация информация информация информация
-                 информация информация информация информация информация информация информация информация
-                 информация информация информация информация информация информация информация информация.
+                Этот ресурс является сервисом <a href="http://tpu.ru">
+                <abbr title="Национальный Исследовательский Томский Политехнический Университет" 
+                class="initialism">НИТПУ</abbr></a>. Этот сервис использует базу данных, предоставленную библиотекой НИТПУ,
+                которая состоит из огромного количества научных записей и документов.
             </p>
             <p>
-                <a class="btn btn-primary btn-large" href="/Doc/Search" >Перейти к поиску</a>
+                <a href="/Doc/Search" class = "btn btn-primary btn-large" >Перейти к поиску</a>
             </p>
         </div>
     </section>
 }
-<h2>Доступные сервисы:</h2>
+<h2>Возможности:</h2>
 
 <div class="row">
     <div class="span4">
-        <h3>Поиск</h3>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p>@Html.ActionLink("Проверить","Search","Doc", new { @class="btn"})</p>
+        <h3>Быстрый поиск</h3>
+        <p>Вы можете использовать быстрый поиск для нахождения обширного диапазона документов. Поиск происходит по ключевым словам, названию и аннотации к научным документам. 
+            Чтобы воспользоваться быстрым поиском можно пройти по ссылке меню <i>"Каталог"</i> в верхней части сайта или
+            формой для поика, расположенной в верхнем правом углу сайта.
+        </p>
+        
     </div>
     <div class="span4">
-        <h3>Информация</h3>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p>@Html.ActionLink("Проверить", "About", "Doc", new { id = 1 }, new { @class="btn"})</p>
+        <h3>Каталоги</h3>
+        <p>Вы можете использовать поиск по каталогам для нахождения документов через алфавитный указатель.
+           Присутствует каталог по авторам и каталог по названиям с алфавитным указателем на русском и английском языках. 
+            Чтобы воспользоваться быстрым поиском можно пройти по ссылке меню <i>"Каталог"</i> в верхней части сайта.
+        </p>
+        
     </div>
     <div class="span4">
         <h3>Загрузка</h3>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p>@Html.ActionLink("Проверить","DownloadFile", "Doc", new { id = 1 }, new { @class="btn"})</p>
+        <p>Вы можете скачивать найденные документы. 
+            Это можно делать как со страницы с результатами поиска, так и со страницы с подробной информацией о документе.</p>
+        
     </div>
 </div>
 

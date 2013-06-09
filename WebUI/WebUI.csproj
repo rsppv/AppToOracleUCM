@@ -275,10 +275,12 @@
     <Content Include="Views\Doc\DownloadFile.cshtml" />
     <Content Include="Views\Doc\SearchResult.cshtml" />
     <Content Include="Views\Shared\DisplayError.cshtml" />
-    <Content Include="Views\Doc\Search.cshtml" />
+    <Content Include="Views\Doc\QuickSearch.cshtml" />
     <Content Include="Views\Doc\ViewMeta.cshtml" />
     <Content Include="Views\Doc\Author.cshtml" />
     <Content Include="Views\Doc\Title.cshtml" />
+    <Content Include="Views\Shared\SearchResults.cshtml" />
+    <Content Include="Views\Doc\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

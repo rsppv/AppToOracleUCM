@@ -53,16 +53,12 @@ namespace WebUI.Controllers
         }
 
         
-        public FileResult DownloadFile(int id, String savePath = "")
+        public FileResult DownloadFile(int id)
         {
             DownloadedFile downloadedFile = new DownloadedFile();
-            if (savePath.Equals("")) downloadedFile.Download(id);
-            else downloadedFile.Download(id, savePath);
-           
-            string fName = downloadedFile.DownloadedFileInfo.Title;
-            string fType = downloadedFile.DownloadedFileInfo.Format;
+            downloadedFile.Download(id);          
             
-            return File(downloadedFile.FileContent,fType,fName);
+            return File(downloadedFile.FileContent,downloadedFile.FileType,downloadedFile.FileName);
         }
 
 
@@ -78,17 +74,24 @@ namespace WebUI.Controllers
             try
             {
                 String query;
+                String sortField;
                 if (inTitle)
+                {
                     query = "dDocTitle <starts> `" + q.ToUpper() +
                             "` <OR> dDocTitle <starts> `" + q.ToLower() +
                             "`";
-                else 
+                    sortField = "dDocTitle";
+                }
+                else
+                {
                     query = "xDocAuthorsTPU_FIO <starts> `" + q.ToUpper() +
                             "` <OR> xDocAuthorsTPU_FIO <starts> `" + q.ToLower() +
                             "` <OR> xDocCoAuthors <starts> `" + q.ToUpper() +
                             "` <OR> xDocCoAuthors <starts> `" + q.ToLower() +
                             "`";
-                docSearch.StartSearch(query, "dCreateDate", "DESC");
+                    sortField = "xDocAuthorsTPU_FIO";
+                }
+                docSearch.StartSearch(query, sortField, "ASC");
                 return View("SearchResult", docSearch.Results.ToList());
             }
             catch (Exception ex)
@@ -99,7 +102,7 @@ namespace WebUI.Controllers
 
         public ActionResult Search()
         {
-            return View();
+            return View("Search");
         }
         
         public ActionResult FormSearch(String q)
@@ -114,15 +117,15 @@ namespace WebUI.Controllers
             {
                 ViewBag.q = q;
                 docSearch.StartSearch(
-                    "dDocTitle <substring> `" + q.ToLower() +
-                    "` <OR> dDocTitle <substring> `" + q[0].ToString().ToUpper() + q.Substring(1).ToLower() +
+                    "xDocAnnotation <substring> `" + q.ToLower() +
+                    "` <OR> xDocAnnotation <substring> `" + q[0].ToString().ToUpper() + q.Substring(1).ToLower() +
                     "` <OR> xDocCaption <substring> `" + q.ToLower() +
                     "` <OR> xDocCaption <substring> `" + q[0].ToString().ToUpper() + q.Substring(1).ToLower() +
                     "` <OR> xDocKeyWords <substring> `" + q.ToLower() +
                     "` <OR> xDocKeyWords <substring> `" + q[0].ToString().ToUpper() + q.Substring(1).ToLower() +
                     "`"
                     , "dCreateDate", "DESC");
-                return View("SearchResult", docSearch.Results.ToList());
+                return View("QuickSearch", docSearch.Results.ToList());
             }
             catch (Exception ex)
             {
