@@ -13,20 +13,13 @@
 
 <fieldset>
     <legend>
-        @Model.FullTitle
+        "@Model.FullTitle"
     </legend>
 
     <dl class="dl-horizontal">
-        <dt>Идентификатор</dt>
-        <dd>@Html.DisplayFor(model => model.Name)</dd>
-           
 
         <dt>Полное название</dt>
         <dd>@Html.DisplayFor(model => model.FullTitle)</dd>
-
-
-        <dt>Тип</dt>
-        <dd> @Html.DisplayFor(model => model.Type)</dd>
 
 
         <dt>Авторы</dt>
@@ -38,7 +31,7 @@
 
 
         <dt>Размер файла</dt>
-        <dd>@Html.DisplayFor(model => model.FileSize)</dd>
+        <dd>@Html.DisplayFor(model => model.FileSize) байт</dd>
 
 
         <dt>Расширение</dt>
@@ -62,10 +55,11 @@
         <dt>Соавторы</dt>
         <dd>@Html.DisplayFor(model => model.CoAuthor)</dd>
 
-        <dd>
-            @Html.ActionLink("Скачать", "DownloadFile", "Doc", new { id = Model.ID }, 
-                new { @class="pull-right btn btn-primary" })
-        </dd>
     </dl>
+    <div class="form-actions">
+         @Html.ActionLink("Скачать", "DownloadFile", "Doc", new { id = Model.ID }, 
+                new { @class="btn btn-primary" })
+        <button type="button" class="btn" onclick="history.back()">Назад</button>
+    </div>
 </fieldset>
 

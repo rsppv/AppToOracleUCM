@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
         <title>@ViewBag.Title</title>
-        <meta name="description" content="Научные документы ТПУ. Труды сотрудников ТПУ." />
+        <meta name="description" content="Каталог научных исследовательских документов ТПУ. Труды сотрудников ТПУ." />
         @if (IsSectionDefined("Keywords"))
         { 
             @RenderSection("Keywords")
@@ -24,7 +24,8 @@
     </head>
 
     <body>
-
+        <!-- Меню
+        ================================================== -->
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
@@ -33,26 +34,34 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="/Home/Index">Каталог</a>
+                    <a class="brand" href="/Home/Index">Каталогизация</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                            <li>@Html.ActionLink("О ресурсе", "About", "Home")</li>
-                            <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Главная", "Index", "Home")</li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Каталог <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li>@Html.ActionLink("По автору", "Author", "Doc")</li>
-                                    <li>@Html.ActionLink("По названию", "Title", "Doc")</li>
+                                    <li>@Html.ActionLink("По названию", "CatalogByTitle", "Search")</li>
                                     <li class="divider"></li>
-                                    <li>@Html.ActionLink("Быстрый поиск", "Search", "Doc")</li>
+                                    <li>@Html.ActionLink("По автору", "CatalogByAuthor", "Search")</li>
                                 </ul>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Поиск <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Простой поиск", "Simple", "Search")</li>
+                                     <li class="divider"></li>
+                                    <li>@Html.ActionLink("Полнотекстовый поиск", "FullText", "Search")</li>
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("О ресурсе", "About", "Home")</li>
+                            
                         </ul>
-                        <form class="navbar-form pull-right" method="post" action="/Doc/FormSearch">
+                        <form class="navbar-form pull-right" method="post" action="/Search/Simple">
                             <div class="input-append">
-                                 <input type="text" class="span3" name="q">
-                                 <button type="submit" class="btn">Найти</button>
+                                 <input type="text" class="span3" name="q" placeholder="Простой поиск">
+                                 <button type="submit" class="btn"><i class="icon-search"></i></button>
                             </div>
                         </form>
                     </div><!--/.nav-collapse -->
@@ -68,50 +77,9 @@
                 </div>
             }
             @RenderBody()
-@*            <div class="row-fluid">
-                <div class="span2">
-                    <div class="well sidebar-nav">
-                        <div class="row-fluid">
-                            <div class="span6">
-                                <ul class="nav nav-list">
-                                     <li class="nav-header text-center">Анг</li>
-                                    @for (int i = 0; i < strEn.Length; i++)
-                                    {
-                                        <li class="text-center">
-                                            @Html.ActionLink(strEn[i].ToString(), "TitleSearch", "Doc",
-                                                new { q = strEn[i].ToString() }, null)
-                                        </li>
-                                    }
-                                </ul>
-                            </div>
-                            <div class="span6">
-                                <ul class="nav nav-list">
-                                     <li class="nav-header text-center">Рус</li>
-                                    @for (int i = 0; i < strRus.Length; i++)
-                                    {
-                                        <li class="text-center">
-                                            @Html.ActionLink(strRus[i].ToString(), "TitleSearch", "Doc",
-                                                new { q = strRus[i].ToString() }, null)
-                                        </li>
-                                    }
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/.well -->
-                </div>*@
-                <!--/span-->
-                @*<div class="span10">*@
-
-                    
-@*                </div>
-                <!--/span-->
-            </div>
-            <!--/row-->*@
 
             <hr>
-
+            
             <div id="footer">
                 <div class="container">
                     <p class="muted credit">Copyright © 2013 Разработано для <a href="http://tpu.ru">ТПУ</a> Распоповым Александром.</p>

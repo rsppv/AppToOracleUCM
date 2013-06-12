@@ -1,0 +1,21 @@
+﻿
+
+@{
+    ViewBag.Title = "Простой поиск";
+}
+
+
+<form method="post" action="/Search/Simple" class="form-search">
+    <fieldset>
+        <legend>@ViewBag.Title</legend>
+        <input type="text" class="input-xxlarge" name="q">
+        <span class="help-block">
+            <br />
+            Вы можете искать документы при помощи формы простого поиска. 
+            Для более успешного поиска постарайтесь использовать ключевые слова, которые могут встречаться 
+            в названии, ключевых словах и аннотации к документам.
+        </span>
+        <button type="submit" class="btn">Найти</button>
+    </fieldset>
+</form>
+

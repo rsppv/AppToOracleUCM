@@ -1,25 +1,22 @@
 ﻿@model System.Exception
 
 @{
-    ViewBag.Title = "Ошибка";
+    ViewBag.Title = "Не найдено · Каталогизация";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>Произошла ошибка</h1>
-            </hgroup>
-        </div>
-    </section>
-}
+
 
 <fieldset>
-    <legend>Извините, произошла ошибка</legend>
+    <legend>Результаты поиска: @ViewBag.q</legend>
 
     <dl class="dl-horizontal">
         <dt>Сообщение</dt>
         <dd>@Html.DisplayFor(model => model.Message)</dd>
+        
     </dl>
+    <button type="button" class="btn" onclick="history.back()"><i class="icon-arrow-left"></i></button>
 </fieldset>
+
+
+

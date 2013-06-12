@@ -1,0 +1,45 @@
+﻿@model IEnumerable<DomainModel.Entity.Document>
+
+@{
+    ViewBag.Title = "Результаты поиска";
+}
+
+<h2>@ViewBag.Title <button type="button" class="btn" onclick="history.back()"><i class="icon-arrow-left"></i></button></h2>
+
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            <abbr title="Вы можете ознакомиться с подробной информацией о конкретном документе, щелкнув по его заголовку в этой колонке">Название</abbr>
+        </th>
+        <th>
+            Авторы
+        </th>
+        <th>
+            <abbr title="Вы можете скачать конкретный документ, щелкнув на его расширении в этой колонке">Расширение</abbr>
+        </th>
+        <th>
+            Дата создания
+        </th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.ShortTitle, "About", "Doc", new { id = item.ID }, null)
+                </td>
+                <td class="align-center">
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td class="align-center">
+                    @Html.ActionLink(item.Extension, "DownloadFile", "Doc", new { id = item.ID }, null)
+                </td>
+                <td class="align-center">
+                    @Html.DisplayFor(modelItem => item.CreateDate)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

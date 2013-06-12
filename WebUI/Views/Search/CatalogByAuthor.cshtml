@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Каталог по авторам";
+
+    String strEn = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    String strRus = "АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЭЮЯ"; 
+}
+
+<h2>@ViewBag.Title</h2>
+<div class="well well-small">
+    <div class="pagination pagination-small">
+        <ul>
+            @for (int i = 0; i < strRus.Length; i++)
+            {              
+                <li>
+                @Html.ActionLink(strRus[i].ToString(), "CatalogByAuthorResponse", "Search", new { letter = strRus[i].ToString() }, new { @class = "btn" })
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="pagination pagination-small">
+        <ul>
+            @for (int i = 0; i < strEn.Length; i++)
+            {              
+                <li>
+                @Html.ActionLink(strEn[i].ToString(), "CatalogByAuthorResponse", "Search", new { letter = strEn[i].ToString() }, new { @class = "btn" })
+                </li>
+            }
+        </ul>
+    </div>
+</div>

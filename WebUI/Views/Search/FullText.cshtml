@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Полнотекстовый поиск";
+}
+
+
+<form method="post" action="/Search/FullText" class="form-search">
+    <fieldset>
+        <legend>@ViewBag.Title</legend>
+        <input type="text" class="input-xxlarge" name="q">
+        <span class="help-block">
+            <br />
+            Здесь вы можете найти документы, внутри которых встречаются слова или словосочетания из запроса. 
+            Поиск осуществляется по содержимому документов, то есть по тексту. Это очень уникальная возможность 
+            найти документы в большей мере удовлетворяющие вашему запросу.
+        </span>
+        <button type="submit" class="btn">Найти</button>
+    </fieldset>
+</form>
