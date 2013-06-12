@@ -7,7 +7,7 @@ using DomainModel.SearchRef;
 using DomainModel.Entity;
 using System.Net;
 
-namespace DomainModel
+namespace DomainModel.Entity
 {
     public class DocSearch
     {
@@ -16,9 +16,7 @@ namespace DomainModel
         private IQueryable<Document> results;
 
         public IQueryable<Document> Results { get { return results;} }
-        public String RequestString { get; set; }
-        public String SortOrderString { get; set; }
-        public String SortValueString { get; set; }
+
         public int CountResults { get; set; } //Найденные документы, соответствующие запросу
         public int CountRecords { get; set; } //Количество отображаемых записей
         
@@ -29,32 +27,8 @@ namespace DomainModel
             searchService.Credentials = new NetworkCredential(Constants.Login, Constants.Password);
         }
        
-        /* return type IList<Document> */
-        public void StartSearch(String request, String sortValue, String sortOreder, int countRec = 50)
-        {
-            AdvancedSearchResult searchResults = new AdvancedSearchResult();
-            if (countRec < 1 || countRec > 50) countRec = 50;
-            
-            searchResults = searchService.AdvancedSearch(request, sortValue, sortOreder, countRec, true, extraProps);
- 
-            if (searchResults == null) throw new Exception("Ваш запрос не был обработан сервером. Попробуйте позже");
-            if (searchResults.StatusInfo.statusCode < 0) throw new Exception(searchResults.StatusInfo.statusMessage);
-            if (searchResults.SearchInfo.totalRows.Equals(0) || (searchResults.SearchResults.Count() == 0))
-                throw new Exception("По запросу ничего не найдено. Попробуйте использовать другие ключевые слова.");
 
-
-            CountResults = searchResults.SearchResults.Count();
-            List<Document> documentsList = new List<Document>(CountResults);
-
-            for (int i = 0; i < CountResults; i++)
-            {
-                documentsList.Add(new Document(searchResults.SearchResults[i]));
-            }
-
-            results = documentsList.AsQueryable();        
-        }
-
-
+        
         public void SearchByLetter(String q, bool inTitle)
         {
             String request;

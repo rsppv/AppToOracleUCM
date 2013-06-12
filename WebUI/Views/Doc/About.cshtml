@@ -57,8 +57,10 @@
 
     </dl>
     <div class="form-actions">
-         @Html.ActionLink("Скачать", "DownloadFile", "Doc", new { id = Model.ID }, 
-                new { @class="btn btn-primary" })
+        @Html.ActionLink("Скачать", "DownloadFile", "Doc", new { id = Model.ID },
+                new { @class = "btn btn-primary" })
+        @Html.ActionLink("Просмотр", "GetPDF", "Doc", new { id = Model.ID },
+                new { @class = "btn btn-primary" })
         <button type="button" class="btn" onclick="history.back()">Назад</button>
     </div>
 </fieldset>

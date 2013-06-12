@@ -8,7 +8,7 @@ using System.Net;
 using DomainModel.Entity;
 
 
-namespace DomainModel
+namespace DomainModel.Entity
 {
     public class DocInformation 
     {

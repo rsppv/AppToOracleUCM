@@ -17,15 +17,11 @@ namespace WebUI.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Каталог документов";
-
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Контактная информация";
-
             return View();
         }
     }

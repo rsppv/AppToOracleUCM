@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="Entity\dMetaData.cs" />
     <Compile Include="Entity\DocInformation.cs" />
     <Compile Include="Entity\Document.cs" />
     <Compile Include="Entity\DownloadedFile.cs" />

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="TopToBottom" Layout="ForceDirected" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@3 @1 @4 Member=(Name=About OverloadingParameters=[(@10 Namespace=System Type=Int32)]))" Category="CodeSchema_Method" Bounds="5.6843418860808E-14,494.763145974125,73.68,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="About" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @4 Member=(Name=DownloadFile OverloadingParameters=[(@10 Namespace=System Type=Int32)]))" Category="CodeSchema_Method" Bounds="44.642454997795,605.518595202668,112.966666666667,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="DownloadFile" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @4 Member=(Name=GetPDF OverloadingParameters=[(@10 Namespace=System Type=Int32)]))" Category="CodeSchema_Method" Bounds="33.5084027459955,371.535240527012,80.5699999999999,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="GetPDF" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @4 Member=Index)" Category="CodeSchema_Method" Bounds="204.697748673756,591.041529982726,69.8333333333334,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="Index" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @6 Member=About)" Category="CodeSchema_Method" Bounds="112.406322238005,13.3988797267708,73.68,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="About" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @6 Member=Contact)" Category="CodeSchema_Method" Bounds="53.7527619214413,128.919253192209,82.0333333333333,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="Contact" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @6 Member=Index)" Category="CodeSchema_Method" Bounds="244.173668744934,-5.6843418860808E-14,69.8333333333334,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="Index" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @8 Member=(Name=CatalogByAuthorResponse @11))" Category="CodeSchema_Method" Bounds="841.531814181682,387.836307595628,181.78,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="CatalogByAuthorResponse" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @8 Member=(Name=CatalogByTitleResponse @11))" Category="CodeSchema_Method" Bounds="642.166678491908,550.672816054609,167.633333333333,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="CatalogByTitleResponse" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @8 Member=(Name=FullText @11))" Category="CodeSchema_Method" Bounds="552.569219725405,454.775564078852,81.6,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="FullText" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @8 Member=(Name=Simple @11))" Category="CodeSchema_Method" Bounds="560.846581199514,254.237231084981,76.8533333333334,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="Simple" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" UseManualLocation="True" />
+    <Node Id="(@3 @1 @8 Member=CatalogByAuthor)" Category="CodeSchema_Method" Bounds="605.029523482038,122.914608310064,130.99,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="CatalogByAuthor" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @8 Member=CatalogByTitle)" Category="CodeSchema_Method" Bounds="850.885946536852,251.942323383481,116.843333333333,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="CatalogByTitle" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @8 Member=FullText)" Category="CodeSchema_Method" Bounds="753.785059139239,178.914552689544,81.6,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="FullText" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @8 Member=Index)" Category="CodeSchema_Method" Bounds="821.207437947674,331.835415754672,69.8333333333333,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="Index" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="(@3 @1 @8 Member=Simple)" Category="CodeSchema_Method" Bounds="784.821461929354,462.366747564647,76.8533333333334,26" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Метод" Icon="Microsoft.VisualStudio.Method.Public" Label="Simple" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="@2" Category="CodeSchema_Namespace" Bounds="297.607605320032,315.794446406852,137.453333333333,26" Icon="Microsoft.VisualStudio.Namespace.Public" Label="WebUI‎.Controllers" />
+    <Node Id="@5" Category="CodeSchema_Class" Bounds="126.122005861037,460.509728170376,114.77,26" CodeSchemaProperty_IsPublic="True" Icon="Microsoft.VisualStudio.Class.Public" Label="DocController" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="@7" Category="CodeSchema_Class" Bounds="170.354316697004,130.056043797521,125.946666666667,26" CodeSchemaProperty_IsPublic="True" Icon="Microsoft.VisualStudio.Class.Public" Label="HomeController" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+    <Node Id="@9" Category="CodeSchema_Class" Bounds="639.147713190816,331.83650672653,129.046666666667,26" CodeSchemaProperty_IsPublic="True" Icon="Microsoft.VisualStudio.Class.Public" Label="SearchController" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
+  </Nodes>
+  <Links>
+    <Link Source="@2" Target="@5" Category="Contains" Bounds="206.987508883543,341.794446406852,142.923103965917,113.129500316047" />
+    <Link Source="@2" Target="@7" Category="Contains" Bounds="247.876818430168,163.373372800623,109.148198921292,152.421073606229" />
+    <Link Source="@2" Target="@9" Category="Contains" Bounds="435.060938653365,332.062745078851,195.096933972976,9.27784048231973" />
+    <Link Source="@5" Target="(@3 @1 @4 Member=(Name=About OverloadingParameters=[(@10 Namespace=System Type=Int32)]))" Category="Contains" Bounds="82.4441592567809,486.399378560447,45.871670058354,10.7131216775043" />
+    <Link Source="@5" Target="(@3 @1 @4 Member=(Name=DownloadFile OverloadingParameters=[(@10 Namespace=System Type=Int32)]))" Category="Contains" Bounds="112.956908157942,486.509728170376,63.1646470764773,111.183521968818" />
+    <Link Source="@5" Target="(@3 @1 @4 Member=(Name=GetPDF OverloadingParameters=[(@10 Namespace=System Type=Int32)]))" Category="Contains" Bounds="96.813836237416,403.204131321525,70.6629920044761,57.3055968488507" />
+    <Link Source="@5" Target="(@3 @1 @4 Member=Index)" Category="Contains" Bounds="189.094887994776,486.509728170376,41.3775323334187,96.2632903594366" />
+    <Link Source="@7" Target="(@3 @1 @6 Member=About)" Category="Contains" Bounds="163.878523793525,46.7000712326249,60.0793008171112,83.3559725648961" />
+    <Link Source="@7" Target="(@3 @1 @6 Member=Contact)" Category="Contains" Bounds="144.785792363376,142.329608722612,25.5685243336283,0.209775053054329" />
+    <Link Source="@7" Target="(@3 @1 @6 Member=Index)" Category="Contains" Bounds="237.901946561167,34.4897660314801,33.626807142269,95.5662777660409" />
+    <Link Source="@9" Target="(@3 @1 @8 Member=(Name=CatalogByAuthorResponse @11))" Category="Contains" Bounds="756.774092131387,357.83650672653,113.802817060738,27.8597320525053" />
+    <Link Source="@9" Target="(@3 @1 @8 Member=(Name=CatalogByTitleResponse @11))" Category="Contains" Bounds="704.996511585858,357.83650672653,18.7484716433075,183.882727960328" />
+    <Link Source="@9" Target="(@3 @1 @8 Member=(Name=FullText @11))" Category="Contains" Bounds="611.043255001009,357.83650672653,80.9640958737235,90.2401158256418" />
+    <Link Source="@9" Target="(@3 @1 @8 Member=(Name=Simple @11))" Category="Contains" Bounds="623.98588315266,285.606225662226,62.1956781754847,46.2302810643039" />
+    <Link Source="@9" Target="(@3 @1 @8 Member=CatalogByAuthor)" Category="Contains" Bounds="673.997296718587,157.803431352768,27.6112336078185,174.033075373762" />
+    <Link Source="@9" Target="(@3 @1 @8 Member=CatalogByTitle)" Category="Contains" Bounds="737.131246691079,281.201660833744,130.327082999559,50.6348458927862" />
+    <Link Source="@9" Target="(@3 @1 @8 Member=FullText)" Category="Contains" Bounds="711.399708974476,212.65065466862,70.8574784161621,119.18585205791" />
+    <Link Source="@9" Target="(@3 @1 @8 Member=Index)" Category="Contains" Bounds="768.194379857483,344.835730027459,44.0130580904213,0.000314962575089339" />
+    <Link Source="@9" Target="(@3 @1 @8 Member=Simple)" Category="Contains" Bounds="715.580180047179,357.83650672653,89.6793833310943,97.8939383834923" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Class" Label="Класс" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Классы" />
+    <Category Id="CodeSchema_Member" Label="Член" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Члены" />
+    <Category Id="CodeSchema_Method" Label="Метод" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="Методы" />
+    <Category Id="CodeSchema_Namespace" Label="Пространство имен" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" NavigationActionLabel="Пространства имен" />
+    <Category Id="CodeSchema_Type" Label="Тип" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Типы" />
+    <Category Id="Contains" Label="Содержит" Description="Указывает, содержит ли источник связи целевой объект" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Содержится в" IsContainment="True" OutgoingActionLabel="Содержит" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPublic" Label="Является Public" Description="Флаг, указывающий на область видимости Public" DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="FunctionTypeFlags" Label="FunctionTypeFlags" Description="FunctionTypeFlags" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Icon" Label="Значок" Description="Значок" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="Label" Label="Метка" Description="Отображаемая метка аннотируемого объекта" DataType="System.String" />
+    <Property Id="Language" Label="Язык" Description="Язык" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Сборка" ValueType="Uri" />
+    <Name Id="Member" Label="Член" ValueType="System.Object" />
+    <Name Id="Name" Label="Имя" ValueType="System.String" />
+    <Name Id="Namespace" Label="Пространство имен" ValueType="System.String" />
+    <Name Id="OverloadingParameters" Label="Параметр" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
+    <Name Id="Type" Label="Тип" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Id="Namespace=WebUI.Controllers" />
+    <Alias n="2" Id="(@1)" />
+    <Alias n="3" Uri="Assembly=$(b489b8fb-265e-4c41-be60-f9c449a54728.OutputPathUri)" />
+    <Alias n="4" Id="Type=DocController" />
+    <Alias n="5" Id="(@3 @1 @4)" />
+    <Alias n="6" Id="Type=HomeController" />
+    <Alias n="7" Id="(@3 @1 @6)" />
+    <Alias n="8" Id="Type=SearchController" />
+    <Alias n="9" Id="(@3 @1 @8)" />
+    <Alias n="10" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.0/mscorlib.dll" />
+    <Alias n="11" Id="OverloadingParameters=[(@10 Namespace=System Type=String)]" />
+  </IdentifierAliases>
+  <Paths>
+    <Path Id="b489b8fb-265e-4c41-be60-f9c449a54728.OutputPath" Value="C:\Users\Honey\documents\visual studio 2012\Projects\AppInteraction2OracleUCM\WebUI\bin\WebUI.dll" />
+    <Path Id="b489b8fb-265e-4c41-be60-f9c449a54728.OutputPathUri" Value="file:///C:/Users/Honey/documents/visual studio 2012/Projects/AppInteraction2OracleUCM/WebUI/bin/WebUI.dll" />
+    <Path Id="FxReferenceAssemblies" Value="C:\Program Files\Reference Assemblies\Microsoft\Framework" />
+    <Path Id="FxReferenceAssembliesUri" Value="file:///C:/Program Files/Reference Assemblies/Microsoft/Framework" />
+  </Paths>
+</DirectedGraph>

@@ -8,6 +8,7 @@ using DomainModel;
 using System.Web.Http;
 using System.Net;
 using System.Net.Http;
+using System.IO;
 
 namespace WebUI.Controllers
 {
@@ -27,7 +28,6 @@ namespace WebUI.Controllers
             try
             {
                 DocInformation dInfo = new DocInformation();
-                dMetaData metadata = new dMetaData();
                 Document document = dInfo.GetDocInfo(id);
                 return View(document);
             }
@@ -47,7 +47,14 @@ namespace WebUI.Controllers
         }
 
 
+        public FileResult GetPDF(int id)
+        {
+            DownloadedFile downloadedFile = new DownloadedFile();
+            downloadedFile.Download(id);
 
+            Response.AppendHeader("Content-Disposition", "inline; filename="+downloadedFile.FileName);
+            return File(downloadedFile.FileContent, downloadedFile.FileType);
+        }
 
     }
 }
