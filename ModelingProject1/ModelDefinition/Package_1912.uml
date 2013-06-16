@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e788b24f-9770-40fa-a9c0-c825495302e1"
+  name="DomainModel"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="3fd3ec4b-31ae-459b-b70c-e8db3cc8412f"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DDomainModel"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5b7baf77-27c3-40f1-8153-3eaadaa8855e"
+        LastKnownName="Entity"
+        LastKnownLocation="Package1_1912.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c2d9efdb-fd8f-49b7-834d-5a397b9849be"
+        LastKnownName="DocInfoRef"
+        LastKnownLocation="Package2_1912.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="227501e0-1d39-4091-afba-aafa69e2509d"
+        LastKnownName="SearchRef"
+        LastKnownLocation="Package5_1912.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="455fb146-d283-4fad-8e96-2b0c89051605"
+        LastKnownName="GetFileRef"
+        LastKnownLocation="Package6_1912.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

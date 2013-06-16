@@ -14,10 +14,10 @@
       <publishTime>05/29/2013 13:55:04</publishTime>
     </File>
     <File Include="bin/DomainModel.dll">
-      <publishTime>06/10/2013 04:31:50</publishTime>
+      <publishTime>06/16/2013 04:46:55</publishTime>
     </File>
     <File Include="bin/DomainModel.XmlSerializers.dll">
-      <publishTime>06/10/2013 04:31:51</publishTime>
+      <publishTime>06/16/2013 04:46:56</publishTime>
     </File>
     <File Include="bin/DotNetOpenAuth.AspNet.dll">
       <publishTime>05/29/2013 13:55:03</publishTime>
@@ -152,7 +152,7 @@
       <publishTime>05/29/2013 13:55:02</publishTime>
     </File>
     <File Include="bin/WebUI.dll">
-      <publishTime>06/10/2013 04:31:51</publishTime>
+      <publishTime>06/16/2013 04:46:56</publishTime>
     </File>
     <File Include="Content/bootstrap-responsive.css">
       <publishTime>05/29/2013 19:08:47</publishTime>
@@ -161,7 +161,7 @@
       <publishTime>05/29/2013 19:08:47</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>05/29/2013 19:08:47</publishTime>
+      <publishTime>06/12/2013 17:02:37</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
       <publishTime>05/29/2013 19:08:47</publishTime>
@@ -419,49 +419,64 @@
       <publishTime>05/29/2013 19:24:20</publishTime>
     </File>
     <File Include="Views/Doc/About.cshtml">
-      <publishTime>06/09/2013 16:16:34</publishTime>
+      <publishTime>06/16/2013 00:12:13</publishTime>
     </File>
     <File Include="Views/Doc/Author.cshtml">
-      <publishTime>06/08/2013 16:38:52</publishTime>
+      <publishTime>08/06/2013 16:38:52</publishTime>
     </File>
     <File Include="Views/Doc/DownloadFile.cshtml">
       <publishTime>06/04/2013 17:01:50</publishTime>
     </File>
     <File Include="Views/Doc/QuickSearch.cshtml">
-      <publishTime>06/08/2013 18:16:48</publishTime>
+      <publishTime>08/06/2013 18:16:48</publishTime>
     </File>
     <File Include="Views/Doc/Search.cshtml">
-      <publishTime>06/08/2013 18:16:34</publishTime>
+      <publishTime>08/06/2013 18:16:34</publishTime>
     </File>
     <File Include="Views/Doc/SearchResult.cshtml">
-      <publishTime>06/08/2013 19:49:43</publishTime>
+      <publishTime>08/06/2013 19:49:43</publishTime>
     </File>
     <File Include="Views/Doc/Title.cshtml">
-      <publishTime>06/08/2013 16:39:10</publishTime>
+      <publishTime>08/06/2013 16:39:10</publishTime>
     </File>
     <File Include="Views/Doc/ViewMeta.cshtml">
-      <publishTime>06/04/2013 23:54:57</publishTime>
+      <publishTime>04/06/2013 23:54:57</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>06/09/2013 17:07:49</publishTime>
+      <publishTime>06/15/2013 23:13:32</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>06/09/2013 17:17:39</publishTime>
+      <publishTime>06/15/2013 23:52:37</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>06/08/2013 19:55:46</publishTime>
+      <publishTime>06/15/2013 23:10:17</publishTime>
+    </File>
+    <File Include="Views/Search/CatalogByAuthor.cshtml">
+      <publishTime>06/12/2013 19:23:40</publishTime>
+    </File>
+    <File Include="Views/Search/CatalogByTitle.cshtml">
+      <publishTime>06/12/2013 19:23:45</publishTime>
+    </File>
+    <File Include="Views/Search/FullText.cshtml">
+      <publishTime>06/12/2013 19:23:48</publishTime>
+    </File>
+    <File Include="Views/Search/Results.cshtml">
+      <publishTime>06/16/2013 03:44:45</publishTime>
+    </File>
+    <File Include="Views/Search/Simple.cshtml">
+      <publishTime>06/16/2013 00:31:30</publishTime>
     </File>
     <File Include="Views/Shared/DisplayError.cshtml">
-      <publishTime>06/09/2013 15:43:32</publishTime>
+      <publishTime>06/16/2013 04:34:10</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>05/29/2013 13:54:42</publishTime>
     </File>
     <File Include="Views/Shared/SearchResults.cshtml">
-      <publishTime>06/08/2013 17:54:36</publishTime>
+      <publishTime>08/06/2013 17:54:36</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>06/09/2013 17:14:59</publishTime>
+      <publishTime>06/16/2013 00:07:02</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>05/29/2013 13:54:42</publishTime>
@@ -473,13 +488,13 @@
       <publishTime>05/29/2013 13:54:42</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/10/2013 04:31:52</publishTime>
+      <publishTime>06/16/2013 04:50:28</publishTime>
     </File>
     <File Include="Web.Debug.config">
-      <publishTime>05/29/2013 13:54:42</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Web.Release.config">
-      <publishTime>05/29/2013 13:54:42</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -18,7 +18,7 @@ namespace DomainModel.Entity
         public IQueryable<Document> Results { get { return results;} }
 
         public int CountResults { get; set; } //Найденные документы, соответствующие запросу
-        public int CountRecords { get; set; } //Количество отображаемых записей
+        public int CountRecords = 100; //Количество отображаемых записей
         
 
         public DocSearch()
@@ -33,7 +33,7 @@ namespace DomainModel.Entity
         {
             String request;
             String sortField;
-            int resultCount = 100; // Количество выдаваемых результатов
+            int resultCount = 200; // Количество выдаваемых результатов
 
             /* Формируем строку запросу к Oracle UCM */
             if (string.IsNullOrWhiteSpace(q))
@@ -43,6 +43,7 @@ namespace DomainModel.Entity
                 request = "dDocTitle <starts> `" + q.ToUpper() +
                                     "` <OR> dDocTitle <starts> `" + q.ToLower() +
                                     "`";
+                if (q.Equals("Е")) request += " <OR> dDocTitle <starts> `Ё`";
                 sortField = "dDocTitle";
             }
             else
@@ -65,8 +66,10 @@ namespace DomainModel.Entity
 
             CountResults = searchResult.SearchResults.Count();
             List<Document> documentsList = new List<Document>(CountResults);
+            int countRec = CountRecords;
 
-            for (int i = 0; i < CountResults; i++)
+            if (CountResults < countRec) countRec = CountResults;
+            for (int i = 0; i < countRec; i++)
             {
                 documentsList.Add(new Document(searchResult.SearchResults[i]));
             }
@@ -78,7 +81,7 @@ namespace DomainModel.Entity
         public void FullTextSearch(String q)
         {
             String request;
-            int resultCount = 100; // Количество выдаваемых результатов
+            int resultCount = 400; // Количество выдаваемых результатов
 
             /* Формируем строку запросу к Oracle UCM */
             if (string.IsNullOrWhiteSpace(q)) request = "a";
@@ -93,8 +96,10 @@ namespace DomainModel.Entity
 
             CountResults = searchResult.SearchResults.Count();
             List<Document> documentsList = new List<Document>(CountResults);
+            int countRec = CountRecords;
 
-            for (int i = 0; i < CountResults; i++)
+            if (CountResults < countRec) countRec = CountResults;
+            for (int i = 0; i < countRec; i++)
             {
                 documentsList.Add(new Document(searchResult.SearchResults[i]));
             }
@@ -107,7 +112,7 @@ namespace DomainModel.Entity
         public void SimpleSearch(String q)
         {
             String request;
-            int resultCount = 100; // Количество выдаваемых результатов
+            int resultCount = 500; // Количество выдаваемых результатов
             
             /* Формируем строку запросу к Oracle UCM */
             if (string.IsNullOrWhiteSpace(q)) request = "a";
@@ -130,8 +135,10 @@ namespace DomainModel.Entity
 
             CountResults = searchResult.SearchResults.Count();
             List<Document> documentsList = new List<Document>(CountResults);
+            int countRec = CountRecords;
 
-            for (int i = 0; i < CountResults; i++)
+            if (CountResults < countRec) countRec = CountResults;
+            for (int i = 0; i < countRec; i++)
             {
                 documentsList.Add(new Document(searchResult.SearchResults[i]));
             }

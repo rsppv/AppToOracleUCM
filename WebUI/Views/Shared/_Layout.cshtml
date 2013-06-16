@@ -4,11 +4,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
         <title>@ViewBag.Title</title>
-        <meta name="description" content="Каталог научных исследовательских документов ТПУ. Труды сотрудников ТПУ." />
+        @if (IsSectionDefined("Description"))
+        { 
+            @RenderSection("Description")
+        }else 
+        {
+            <meta name="description" content="Электронный каталог научных исследовательских документов ТПУ. Труды сотрудников ТПУ. База знаний научно-технической библиотеки ТПУ" />
+        }
+        
         @if (IsSectionDefined("Keywords"))
         { 
             @RenderSection("Keywords")
         }
+        @if (IsSectionDefined("Author"))
+        { 
+            @RenderSection("Author")
+        }
+
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
 
@@ -126,7 +138,11 @@
 
         <div id="footer">
             <div class="container">
-                <p class="muted credit">Copyright © 2013 Разработано для <a href="http://tpu.ru">ТПУ</a> Распоповым Александром.</p>
+                <p class="muted credit">
+                    Copyright ©  @DateTime.Now.Year Каталоги ТПУ | Распопов Александр | Сайт разработан на <a href="http://asp.net">ASP.NET 4</a>
+                    
+                </p>
+                
             </div>
         </div>
         @Scripts.Render("~/bundles/jquery")

@@ -1,21 +1,20 @@
 ﻿@model System.Exception
 
 @{
-    ViewBag.Title = "Не найдено · Каталогизация";
+    ViewBag.Title = "Не найдено · Каталоги ТПУ";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    if (ViewBag.ExMsg == null) {ViewBag.ExMsg = "Ошибка";}
 }
 
 
 
 <fieldset>
-    <legend>Результаты поиска: @ViewBag.q</legend>
-
-    <dl class="dl-horizontal">
-        <dt>Сообщение</dt>
-        <dd>@Html.DisplayFor(model => model.Message)</dd>
-        
-    </dl>
-    <button type="button" class="btn" onclick="history.back()"><i class="icon-arrow-left"></i></button>
+    <legend>@ViewBag.ExMsg: @ViewBag.q</legend>
+        <h5>@Html.DisplayFor(model => model.Message)</h5>
+@*        <p>@Html.DisplayFor(model => model.StackTrace)</p>
+        <p>@Html.DisplayFor(model => model.Source)</p>
+        <p>@Html.DisplayFor(model => model.InnerException)</p>*@
+        <p><button type="button" class="btn btn-primary" onclick="history.back()">Назад</button></p>
 </fieldset>
 
 

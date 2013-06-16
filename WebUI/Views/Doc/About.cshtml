@@ -1,12 +1,19 @@
 ﻿@model DomainModel.Entity.Document
 
 @{
-    ViewBag.Title = "Информация о документе";
+    ViewBag.Title = @Model.ShortTitle;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@section Description {
+    @if (!@Model.Annotation.Equals("Отсутствует")){
+    <meta name="description" content="@Model.Annotation"/>
+    }else{<meta name="description" content="@Model.Keywords"/>}
+}
 @section Keywords {
     <meta name="keywords" content="@Model.Keywords" />
+}
+@section Author {
+    <meta name="author" content="@Model.Author"/>
 }
 
 <h2>Дополнительная информация о документе</h2>

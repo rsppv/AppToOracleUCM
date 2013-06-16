@@ -39,8 +39,18 @@ namespace DomainModel.Entity
                 : "Отсутствует";
             this.CreateDate = contentInfo.dCreateDate;
             this.FileSize = contentInfo.dFileSize;
-            this.Extension = contentInfo.dExtension;
-            this.Format = contentInfo.dFormat;
+
+            if (contentInfo.dExtension.Length > 4 && contentInfo.dFormat.Length > 16)
+            {
+                this.Format = contentInfo.dFormat.Remove(contentInfo.dFormat.IndexOf('#'));
+                this.Extension = contentInfo.dExtension.Remove(contentInfo.dExtension.IndexOf('#'));
+            }
+            else
+            {
+                this.Extension = contentInfo.dExtension;
+                this.Format = contentInfo.dFormat;
+            }
+
             this.ShortTitle = (contentInfo.xDocCaption != null && contentInfo.xDocCaption.Length > 100) 
                 ? contentInfo.xDocCaption.Remove(99) 
                 + "..." : contentInfo.xDocCaption;
@@ -67,8 +77,18 @@ namespace DomainModel.Entity
             this.Author = fileInfo.xDocAuthorsTPU_FIO.TrimEnd(',');
             this.CreateDate = fileInfo.dCreateDate;
             this.FileSize = fileInfo.dFileSize;
-            this.Extension = fileInfo.dExtension;
-            this.Format = fileInfo.dFormat;
+
+            if (fileInfo.dExtension.Length > 4 && fileInfo.dFormat.Length > 16)
+            {
+                this.Format = fileInfo.dFormat.Remove(fileInfo.dFormat.IndexOf('#'));
+                this.Extension = fileInfo.dExtension.Remove(fileInfo.dExtension.IndexOf('#'));
+            }
+            else
+            {
+                this.Extension = fileInfo.dExtension;
+                this.Format = fileInfo.dFormat;
+            }
+
             this.ShortTitle = (fileInfo.xDocCaption != null && fileInfo.xDocCaption.Length > 100)
                 ? fileInfo.xDocCaption.Remove(99)
                 + "..." : fileInfo.xDocCaption;
@@ -82,20 +102,39 @@ namespace DomainModel.Entity
 
         public Document(SearchResults searchResults)
         {
+            
             this.ID = searchResults.dID;
             this.Name = searchResults.dDocName;
             this.Type = searchResults.dDocType;
             this.Author = (searchResults.xDocAuthorsTPU_FIO != "")
                 ? searchResults.xDocAuthorsTPU_FIO.TrimEnd(',')
-                : "Отсутствует";
+                : "Не указаны";
             this.CreateDate = searchResults.dInDate;
             this.FileSize = searchResults.alternateFileSize;
-            this.Extension = searchResults.dExtension;
-            this.Format = searchResults.dFormat;
-            this.ShortTitle = (searchResults.xDocCaption != null && searchResults.xDocCaption.Length > 100)
-                ? searchResults.xDocCaption.Remove(99)
-                + "..." : searchResults.xDocCaption;
-            this.FullTitle = searchResults.xDocCaption;
+
+            if (searchResults.dExtension.Length > 4 && searchResults.dFormat.Length > 16)
+            {
+                this.Format = searchResults.dFormat.Remove(searchResults.dFormat.IndexOf('#'));
+                this.Extension = searchResults.dExtension.Remove(searchResults.dExtension.IndexOf('#'));
+            }
+            else
+            {
+                this.Extension = searchResults.dExtension;
+                this.Format = searchResults.dFormat;
+            }
+
+            if (string.IsNullOrWhiteSpace(searchResults.xDocCaption))
+            {
+                this.ShortTitle = "Отсутствует";
+                this.FullTitle = "Отсутствует";
+            }
+            else
+            {
+                this.ShortTitle = (searchResults.xDocCaption != null && searchResults.xDocCaption.Length > 100)
+                    ? searchResults.xDocCaption.Remove(99)
+                    + "..." : searchResults.xDocCaption;
+                this.FullTitle = searchResults.xDocCaption;
+            }
             this.InDate = searchResults.dInDate;
             this.CoAuthor = searchResults.xDocCoAuthors;
             this.Keywords = searchResults.xDocKeyWords.TrimEnd(',');

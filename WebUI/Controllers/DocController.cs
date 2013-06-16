@@ -38,22 +38,36 @@ namespace WebUI.Controllers
         }
 
         
-        public FileResult DownloadFile(int id)
+        public ActionResult DownloadFile(int id)
         {
-            DownloadedFile downloadedFile = new DownloadedFile();
-            downloadedFile.Download(id);          
-            
-            return File(downloadedFile.FileContent,downloadedFile.FileType,downloadedFile.FileName);
+            try
+            {
+                DownloadedFile downloadedFile = new DownloadedFile();
+                downloadedFile.Download(id);
+
+                return File(downloadedFile.FileContent, downloadedFile.FileType, downloadedFile.FileName);
+            }
+            catch (Exception ex)
+            {
+                return View("DisplayError", ex);
+            }
         }
 
 
-        public FileResult GetPDF(int id)
+        public ActionResult GetPDF(int id)
         {
-            DownloadedFile downloadedFile = new DownloadedFile();
-            downloadedFile.Download(id);
+            try
+            {
+                DownloadedFile downloadedFile = new DownloadedFile();
+                downloadedFile.Download(id);
 
-            Response.AppendHeader("Content-Disposition", "inline; filename="+downloadedFile.FileName);
-            return File(downloadedFile.FileContent, downloadedFile.FileType);
+                Response.AppendHeader("Content-Disposition", "inline; filename=" + downloadedFile.FileName);
+                return File(downloadedFile.FileContent, downloadedFile.FileType);
+            }
+            catch (Exception ex)
+            {
+                return View("DisplayError", ex);
+            }
         }
 
     }

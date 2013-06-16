@@ -14,9 +14,9 @@ namespace DomainModel.Entity
     {
         
         private DocInfo docinfo = new DocInfo();
-        private IdcProperty[] extraProps;
-     
-       
+        private IdcProperty[] extraProps = new IdcProperty[1];
+
+        public Document document { get; set; }
         /* Конструктор. Устанавливает настройки сертификата
          * доступа к UCM серверу.
          */
@@ -63,7 +63,7 @@ namespace DomainModel.Entity
                 // This should never happen.
                 throw new Exception("Запрашиваемая информация отсутсвует");
             }
-            Document document = new Document(docInfoByIDResult.ContentInfo[0]);
+            document = new Document(docInfoByIDResult.ContentInfo[0]);
             return document;
         }
 

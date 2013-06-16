@@ -12,7 +12,7 @@ namespace DomainModel.Entity
     public class DownloadedFile
     {
         private GetFile getfile = new GetFile();
-        private IdcProperty[] extraProps;
+        private IdcProperty[] extraProps = new IdcProperty[1];
         
         public Document DownloadedFileInfo { get; set; }
         public byte[] FileContent { get; set; }

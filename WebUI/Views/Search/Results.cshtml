@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<DomainModel.Entity.Document>
 
 @{
-    ViewBag.Title = "Результаты поиска";
+    ViewBag.Title = "Результаты поиска - \"" +@ViewBag.q+"\"";
 }
 
-<h2>@ViewBag.Title <button type="button" class="btn" onclick="history.back()"><i class="icon-arrow-left"></i></button></h2>
-
+<h2>@ViewBag.Title <button type="button" class="btn btn-primary" onclick="history.back()">Назад</button></h2>
+<h4>Найдено документов - @ViewBag.ResultCount</h4>
 
 <table class="table table-bordered table-hover">
     <tr>
@@ -28,6 +28,7 @@
             <tr>
                 <td>
                     @Html.ActionLink(item.ShortTitle, "About", "Doc", new { id = item.ID }, null)
+                    @*<a href="/Doc/About/@item.ID">@item.ShortTitle</a>*@
                 </td>
                 <td class="align-center">
                     @Html.DisplayFor(modelItem => item.Author)

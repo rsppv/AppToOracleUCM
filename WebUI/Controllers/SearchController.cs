@@ -1,4 +1,4 @@
-﻿using DomainModel;
+﻿using DomainModel.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,14 +28,16 @@ namespace WebUI.Controllers
         {
             DocSearch docSearch = new DocSearch();
             ViewBag.q = q;
-
+             
             try
             {
                 docSearch.SimpleSearch(q);
+                ViewBag.ResultCount = docSearch.CountResults;
                 return View("Results", docSearch.Results.ToList());
             }
             catch (Exception ex)
             {
+                ViewBag.ExMsg = "Результаты поиска";
                 return View("DisplayError", ex);
             }
         }
@@ -58,10 +60,12 @@ namespace WebUI.Controllers
             try
             {
                 docSearch.FullTextSearch(q);
+                ViewBag.ResultCount = docSearch.CountResults;
                 return View("Results", docSearch.Results.ToList());
             }
             catch (Exception ex)
             {
+                ViewBag.ExMsg = "Результаты поиска";
                 return View("DisplayError", ex);
             }
         }
@@ -80,10 +84,12 @@ namespace WebUI.Controllers
             try
             {
                 docSearch.SearchByLetter(letter, false);
+                ViewBag.ResultCount = docSearch.CountResults;
                 return View("Results", docSearch.Results.ToList());
             }
             catch (Exception ex)
             {
+                ViewBag.ExMsg = "Результаты поиска";
                 return View("DisplayError", ex);
             }
         }
@@ -102,10 +108,12 @@ namespace WebUI.Controllers
             try
             {
                 docSearch.SearchByLetter(letter, true);
+                ViewBag.ResultCount = docSearch.CountResults;
                 return View("Results", docSearch.Results.ToList());
             }
             catch (Exception ex)
             {
+                ViewBag.ExMsg = "Результаты поиска";
                 return View("DisplayError", ex);
             }
         } 

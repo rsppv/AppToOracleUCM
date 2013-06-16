@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES/MICROSOFT VISUAL STUDIO 11.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Журнал создания кода/преобразования текста">
+  <MessageClass Name="Message" Label="Сообщение" Option="Показывать информационные сообщения" />
+  <MessageClass Name="Warning" Label="Предупреждение" Option="Показывать предупреждения" />
+  <MessageClass Name="Error" Label="Ошибка" Option="Показывать ошибки" />
+  <MessageClass Name="Property" Label="Свойство" Option="Показывать метаданные" />
+  <MessageClass Name="Diagnostic" Label="Сообщение" Option="Показывать диагностические сообщения" />
+  <Message Timestamp="2013-06-13T19:27:00" Importance="High" Text="Реконструирование запущено." />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;Boolean&quot; -  (PrimitiveType)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;e82c398f-71cc-4ed2-ac48-679f3a4d3d9c&quot; -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;Integer&quot; -  (PrimitiveType)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel&quot; -  (Package)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity&quot; -  (Package)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Medium" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch&quot; -  (Class)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::CountRecords&quot; -  (Property)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::CountResults&quot; -  (Property)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::DocSearch&quot; -  (Operation)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::extraProps&quot; -  (Property)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::FullTextSearch&quot; -  (Operation)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::FullTextSearch::q&quot; -  (Parameter)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::results&quot; -  (Property)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::Results&quot; -  (Property)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::SearchByLetter&quot; -  (Operation)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::SearchByLetter::inTitle&quot; -  (Parameter)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::SearchByLetter::q&quot; -  (Parameter)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::searchService&quot; -  (Property)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::SimpleSearch&quot; -  (Operation)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::DocSearch::SimpleSearch::q&quot; -  (Parameter)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::Entity::Document&quot; -  (Class)   (реконструирован частично - определение не обновлено) " />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::SearchRef&quot; -  (Package)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::SearchRef::IdcProperty&quot; -  (Class)   (реконструирован частично - определение не обновлено) " />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::DomainModel::SearchRef::Search&quot; -  (Class)   (реконструирован частично - определение не обновлено) " />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::System&quot; -  (Package)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::System::Linq&quot; -  (Package)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::System::Linq::IQueryable&quot; -  (Interface)   (реконструирован частично - определение не обновлено) " />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;ModelingProject1::System::Linq::IQueryable&lt;Document‎&gt;&quot; -  (Interface)   (реконструирован частично - определение не обновлено) " />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Элемент реконструирован в модели UML: &quot;String&quot; -  (PrimitiveType)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="Diagnostic" Text="Отношение реконструировано в модели UML: ModelingProject1::DomainModel::Entity::DocSearch в ModelingProject1::System::Linq::IQueryable&lt;Document‎&gt; (Association)" />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="High" Text="Полностью реконструировано (1) типов." />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="High" Text="Частично реконструировано (5) типов.  Эти типы не были включены в исходный выбор, поэтому их полные определения не реконструированы.  Данная пустая операция лишь проверила наличие этих типов в модели UML, поскольку они необходимы для полного описания других элементов." />
+  <Message Timestamp="2013-06-13T19:27:02" Importance="High" Text="Операция реконструирования завершена; ошибок: (0), предупреждений: (0)." />
+</Log>
